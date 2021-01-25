@@ -1,0 +1,24 @@
+Passo a passo Heroku:
+
+Instalar Heroku CLI, PostgreSQL, Git
+
+1. Abrir terminal na pasta do projeto.
+
+2. Fazer login Heroku (heroku login) no terminal.
+
+3. Criar um item Procfile.
+    3.1 Config: web java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.war
+
+4. Iniciar repositório (git init) 
+
+5. Adicionar arquivos sobre o comando do Git (git add .)
+
+6. Commitar (git commit -m "Mensagem")
+
+7. Criar cotainer de aplicação (heroku create)
+
+8.  heroku addons:create heroku-postgresql:hobby-dev --app nome_do_servidor no passo 7.
+
+9. git push heroku master
+
+Para arualizar aplicação refazer os passos a partir do passo 5.
